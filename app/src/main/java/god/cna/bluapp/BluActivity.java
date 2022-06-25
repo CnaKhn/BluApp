@@ -20,20 +20,24 @@ public class BluActivity extends AppCompatActivity {
             this.getSupportActionBar().hide();
         } catch (NullPointerException e) {
         }
-
         BottomNavigationView bottomNavBlu = findViewById(R.id.bottom_nav_blu);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.frame_blu, new FragmentAccount());
+        fragmentTransaction.commit();
+
+        bottomNavBlu.setSelectedItemId(R.id.item_account_fragment);
         bottomNavBlu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
                 if (item.getItemId() == R.id.item_account_fragment) {
-                    fragmentTransaction.add(R.id.frame_blu, new FragmentAccount());
-                    fragmentTransaction.addToBackStack("");
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_blu, new FragmentAccount());
                     fragmentTransaction.commit();
                 }
                 if (item.getItemId() == R.id.item_transfer_fragment) {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_blu, new FragmentTransfer());
-                    fragmentTransaction.addToBackStack("");
                     fragmentTransaction.commit();
                 }
                 return true;
