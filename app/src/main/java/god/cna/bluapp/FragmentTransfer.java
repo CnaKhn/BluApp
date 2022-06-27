@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,5 +41,15 @@ public class FragmentTransfer extends Fragment {
             }
         });
         rvTransferName.setAdapter(transferAdapter);
+
+        btnAddTransfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame_blu, new NewTransferFragment());
+                fragmentTransaction.addToBackStack("");
+                fragmentTransaction.commit();
+            }
+        });
     }
 }

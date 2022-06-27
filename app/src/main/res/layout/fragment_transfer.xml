@@ -49,13 +49,13 @@
         android:id="@+id/btn_add_transfer"
         android:layout_width="145dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
         android:text="انتقال جدید"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         android:textColor="@color/white"
         app:icon="@drawable/ic_add_blu"
+        app:iconGravity="end"
         app:iconTint="@color/white"
-        app:iconGravity="end"/>
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
 </RelativeLayout>
