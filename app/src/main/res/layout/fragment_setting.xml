@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ic_info_setting"
+        android:layout_alignBottom="@id/ic_info_setting"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="تنظیمات"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ic_info_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_info" />
+
+    <ImageView
+        android:id="@+id/img_setting_pro"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/txt_setting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_transfer"
+        android:padding="8dp"
+        android:src="@drawable/ic_person_grey" />
+
+    <TextView
+        android:id="@+id/txt_setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_setting_pro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="CnaKhn"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_setting_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_setting_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="سپرده کوتاه مدت" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_setting_info"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-8dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_scroll_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_scroll_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="اطلاعات"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_home"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_info"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_home" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_bank_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_home"
+                        android:layout_alignBottom="@id/ic_scroll_home"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_home"
+                        android:gravity="center"
+                        android:text="حساب بانکی" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_bank_account"
+                        android:layout_alignBottom="@id/txt_scroll_bank_account"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_change_phone"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ic_scroll_home"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_sim_card" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_change_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_change_phone"
+                        android:layout_alignBottom="@id/ic_change_phone"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_change_phone"
+                        android:gravity="center"
+                        android:text="تغییر شماره تلفن همراه" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_change_phone"
+                        android:layout_alignBottom="@id/txt_scroll_change_phone"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_change_loc"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ic_change_phone"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_change_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_change_loc"
+                        android:layout_alignBottom="@id/ic_change_loc"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_change_loc"
+                        android:gravity="center"
+                        android:text="تغییر آدرس سکونت" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_change_loc"
+                        android:layout_alignBottom="@id/txt_scroll_change_loc"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_scroll_sec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_scroll_info"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_scroll_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="امنیت"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_finger"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_sec"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_fingerprint" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_enter_with_finger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_finger"
+                        android:layout_alignBottom="@id/ic_scroll_finger"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_finger"
+                        android:gravity="center"
+                        android:text="ورود با اثر انگشت" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_enter_with_finger"
+                        android:layout_alignBottom="@id/txt_scroll_enter_with_finger"
+                        android:layout_marginStart="18dp"
+                        android:checked="true"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_changepass"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_enter_with_finger"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_key" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_change_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_changepass"
+                        android:layout_alignBottom="@id/ic_scroll_changepass"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_changepass"
+                        android:gravity="center"
+                        android:text="تغییر رمز ورود" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_change_password"
+                        android:layout_alignBottom="@id/txt_scroll_change_password"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_bill_pass"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_change_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_lock" />
+
+                    <TextView
+                        android:id="@+id/txt_change_bill_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_bill_pass"
+                        android:layout_alignBottom="@id/ic_bill_pass"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_bill_pass"
+                        android:gravity="center"
+                        android:text="رمز تراکنش" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_change_bill_pass"
+                        android:layout_alignBottom="@id/txt_change_bill_pass"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_my_devices"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_change_bill_pass"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_phone" />
+
+                    <TextView
+                        android:id="@+id/txt_my_devices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_my_devices"
+                        android:layout_alignBottom="@id/ic_my_devices"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_my_devices"
+                        android:gravity="center"
+                        android:text="دستگاه های من" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_my_devices"
+                        android:layout_alignBottom="@id/txt_my_devices"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_scroll_notifs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_scroll_sec"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_scroll_notifs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="اطلاع رسانی ها"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_notif"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_notifs"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_notif" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_notif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_notif"
+                        android:layout_alignBottom="@id/ic_scroll_notif"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_notif"
+                        android:gravity="center"
+                        android:text="تنظیمات اطلاع رسانی" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_notif"
+                        android:layout_alignBottom="@id/txt_scroll_notif"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_scroll_generals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_scroll_notifs"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_scroll_generals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="عمومی"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_general"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/txt_scroll_generals"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_people" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_general"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_general"
+                        android:layout_alignBottom="@id/ic_scroll_general"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_general"
+                        android:gravity="center"
+                        android:text="دعوت از دوستان" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_general"
+                        android:layout_alignBottom="@id/txt_scroll_general"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_terms"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ic_scroll_general"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_terms" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_terms"
+                        android:layout_alignBottom="@id/ic_scroll_terms"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_terms"
+                        android:gravity="center"
+                        android:text="شرایط و ضوابط" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_terms"
+                        android:layout_alignBottom="@id/txt_scroll_terms"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_about"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ic_scroll_terms"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_smile" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_about"
+                        android:layout_alignBottom="@id/ic_scroll_about"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_about"
+                        android:gravity="center"
+                        android:text="درباره ما" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/txt_scroll_about"
+                        android:layout_alignBottom="@id/txt_scroll_about"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/ic_arrow_setting" />
+
+                    <ImageView
+                        android:id="@+id/ic_scroll_exit"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ic_scroll_about"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/bg_setting_icon"
+                        android:backgroundTint="@android:color/holo_red_light"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exit" />
+
+                    <TextView
+                        android:id="@+id/txt_scroll_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/ic_scroll_exit"
+                        android:layout_alignBottom="@id/ic_scroll_exit"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@id/ic_scroll_exit"
+                        android:gravity="center"
+                        android:text="خروج"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                    <TextView
+                        android:id="@+id/txt_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_scroll_exit"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Version 1.0.0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_version"
+                        android:text="Made with ❤ in Iran"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="18dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

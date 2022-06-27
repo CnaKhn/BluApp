@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/business_banner"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/blu_banner" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/business_banner"
+        android:layout_alignBottom="@id/business_banner"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_scanner" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_info_white" />
+
+    <ImageView
+        android:id="@+id/banner_business"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/business_banner"
+        android:src="@drawable/banner_business" />
+
+    <TextView
+        android:id="@+id/txt_daily_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_business"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        android:text="خدمات روزمره"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/img_business_giftcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_daily_business"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_business_icon"
+        android:backgroundTint="#459713"
+        android:padding="16dp"
+        android:src="@drawable/ic_giftcard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_business_giftcard"
+        android:layout_alignStart="@id/img_business_giftcard"
+        android:layout_alignEnd="@id/img_business_giftcard"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="پاداش" />
+
+    <ImageView
+        android:id="@+id/img_business_billcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_daily_business"
+        android:layout_marginTop="18dp"
+        android:layout_toStartOf="@id/img_business_simcard"
+        android:background="@drawable/bg_business_icon"
+        android:backgroundTint="@color/blue_700"
+        android:padding="16dp"
+        android:src="@drawable/ic_event_note" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_business_billcard"
+        android:layout_alignStart="@id/img_business_billcard"
+        android:layout_alignEnd="@id/img_business_billcard"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="قبض" />
+
+    <ImageView
+        android:id="@+id/img_business_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_daily_business"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@id/img_business_giftcard"
+        android:background="@drawable/bg_business_icon"
+        android:backgroundTint="@color/blue_200"
+        android:padding="16dp"
+        android:src="@drawable/ic_earth" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_business_internet"
+        android:layout_alignStart="@id/img_business_internet"
+        android:layout_alignEnd="@id/img_business_internet"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="اینترنت" />
+
+    <ImageView
+        android:id="@+id/img_business_simcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_daily_business"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_business_icon"
+        android:backgroundTint="#6F4798"
+        android:padding="16dp"
+        android:src="@drawable/ic_sim_card" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_business_simcard"
+        android:layout_alignStart="@id/img_business_simcard"
+        android:layout_alignEnd="@id/img_business_simcard"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="شارژ" />
+
+
+</RelativeLayout>

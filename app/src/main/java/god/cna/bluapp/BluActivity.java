@@ -40,6 +40,16 @@ public class BluActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.frame_blu, new FragmentTransfer());
                     fragmentTransaction.commit();
                 }
+                if (item.getItemId() == R.id.item_business_fragment) {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_blu, new BusinessFragment());
+                    fragmentTransaction.commit();
+                }
+                if (item.getItemId() == R.id.item_setting_fragment) {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_blu, new SettingFragment());
+                    fragmentTransaction.commit();
+                }
                 return true;
             }
         });
