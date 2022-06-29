@@ -10,7 +10,7 @@
         android:id="@+id/item_transfer_fragment"
         android:icon="@drawable/ic_arrows"
         android:orderInCategory="3"
-        android:title="انقال" />
+        android:title="انتقال" />
 
     <item
         android:id="@+id/item_business_fragment"
