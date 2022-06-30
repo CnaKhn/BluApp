@@ -19,7 +19,7 @@
         android:title="پرداخت سریع" />
 
     <item
-        android:id="@+id/item_card_fragment_"
+        android:id="@+id/item_card_fragment"
         android:icon="@drawable/ic_card"
         android:orderInCategory="1"
         android:title="کارت" />

@@ -22,7 +22,6 @@ public class BluActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blu);
 
 
-
         try {
             this.getSupportActionBar().hide();
         } catch (NullPointerException e) {
@@ -57,12 +56,17 @@ public class BluActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.frame_blu, new SettingFragment());
                     fragmentTransaction.commit();
                 }
+                if (item.getItemId() == R.id.item_card_fragment) {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_blu, new CardFragment());
+                    fragmentTransaction.commit();
+                }
                 return true;
             }
         });
     }
 
-    public void updateStatusBarColor(String color){// Color must be in hexadecimal fromat
+    public void updateStatusBarColor(String color) {// Color must be in hexadecimal fromat
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
