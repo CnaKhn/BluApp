@@ -3,11 +3,10 @@ package god.cna.bluapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
@@ -21,26 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initViews();
         try {
             this.getSupportActionBar().hide();
         } catch (NullPointerException e) {
         }
-
-        /*BiometricManager biometricManager = BiometricManager.from(MainActivity.this);
-        switch (biometricManager.canAuthenticate()) {
-            case BiometricManager.BIOMETRIC_SUCCESS:
-                Toast.makeText(MainActivity.this, "You can use the fingerprint sensor to login.", Toast.LENGTH_SHORT).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-                Toast.makeText(MainActivity.this, "You don't have fingerprint sensor.", Toast.LENGTH_SHORT).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-                Toast.makeText(MainActivity.this, "the biometric sensor is unavailable.", Toast.LENGTH_SHORT).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                Toast.makeText(MainActivity.this, "Your device don't have fingerprint saved.", Toast.LENGTH_SHORT).show();
-                break;
-        }*/
 
         Executor executor = ContextCompat.getMainExecutor(MainActivity.this);
         BiometricPrompt biometricPrompt = new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
@@ -73,6 +57,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 biometricPrompt.authenticate(promptInfo);
+            }
+        });
+
+    }
+
+    private void initViews() {
+
+        ImageView btnMainInfo = findViewById(R.id.ic_info_main);
+        btnMainInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                InfoMainDialog infoMainDialog = new InfoMainDialog();
+                infoMainDialog.setCancelable(false);
+                infoMainDialog.show(getSupportFragmentManager(), null);
+
             }
         });
 
