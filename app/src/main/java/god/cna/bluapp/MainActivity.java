@@ -11,15 +11,19 @@ import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
+    private UserManager userManager;
+    TextInputEditText inputUsername, inputPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        userManager = new UserManager(MainActivity.this);
         initViews();
         try {
             this.getSupportActionBar().hide();
@@ -57,13 +61,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 biometricPrompt.authenticate(promptInfo);
+                String txtInputUsername = inputUsername.getText().toString();
+
+                String txtInputPassword = inputPassword.getText().toString();
+
+                userManager.saveUserInfo(txtInputUsername, txtInputPassword);
+
+
             }
         });
 
     }
 
     private void initViews() {
-
         ImageView btnMainInfo = findViewById(R.id.ic_info_main);
         btnMainInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,9 +81,19 @@ public class MainActivity extends AppCompatActivity {
                 InfoMainDialog infoMainDialog = new InfoMainDialog();
                 infoMainDialog.setCancelable(false);
                 infoMainDialog.show(getSupportFragmentManager(), null);
-
             }
         });
 
+        inputUsername = findViewById(R.id.input_username);
+        inputPassword = findViewById(R.id.input_password);
+        if (userManager.getUsername() != null) {
+            inputUsername.setText(userManager.getUsername());
+
+        }
+
+        if (userManager.getPassword() != null) {
+            inputPassword.setText(userManager.getPassword());
+
+        }
     }
 }
