@@ -32,8 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/blu_logo_main"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="18dp"
         android:textColorHint="@color/grey_hint"
         app:boxCornerRadiusTopEnd="8dp"
@@ -44,10 +44,10 @@
             android:id="@+id/input_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="نام کاربری"
             android:inputType="text"
             android:maxLength="18"
-            android:maxLines="2"
-            android:hint="نام کاربری" />
+            android:maxLines="2" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,10 +68,10 @@
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="رمز عبور"
             android:inputType="textPassword"
-            android:maxLines="1"
             android:maxLength="16"
-            android:hint="رمز عبور" />
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,16 +87,17 @@
         android:text="ورود به بلوبانک"
         app:cornerRadius="8dp" />
 
-    <TextView
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/txt_main_forget"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
+        android:layout_alignStart="@id/btn_login"
+        android:layout_alignEnd="@id/btn_login"
+        android:layout_marginTop="6dp"
         android:fontFamily="@font/iransans_medium"
         android:text="فراموشی رمزعبور/نام کاربری"
-        android:textColor="@color/blue_500"
-        android:textStyle="bold"
-        android:textSize="13sp" />
+        app:strokeWidth="0dp" />
 
 </RelativeLayout>

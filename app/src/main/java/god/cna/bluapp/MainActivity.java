@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         try {
             this.getSupportActionBar().hide();
-        } catch (NullPointerException e) {
-        }
+        } catch (NullPointerException e) {}
 
         Executor executor = ContextCompat.getMainExecutor(MainActivity.this);
         BiometricPrompt biometricPrompt = new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
@@ -95,5 +95,13 @@ public class MainActivity extends AppCompatActivity {
             inputPassword.setText(userManager.getPassword());
 
         }
+
+        TextView txtForget = findViewById(R.id.txt_main_forget);
+        txtForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ForgetActivity.class));
+            }
+        });
     }
 }

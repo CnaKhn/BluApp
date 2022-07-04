@@ -16,6 +16,9 @@
         android:theme="@style/Theme.BluApp"
         tools:targetApi="31">
         <activity
+            android:name=".ForgetActivity"
+            android:exported="false" />
+        <activity
             android:name=".BluActivity"
             android:exported="false" />
         <activity

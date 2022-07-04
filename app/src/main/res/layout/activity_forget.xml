@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetActivity">
+
+    <TextView
+        android:id="@+id/txt_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ic_info_forget"
+        android:layout_alignBottom="@id/ic_info_forget"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="فراموشی اطلاعات"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ic_info_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_info" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/txt_forget"
+        android:layout_alignBottom="@id/txt_forget"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_back" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_forget_username"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_forget"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="start"
+        android:padding="12dp"
+        android:text="فراموشی رمز عبور"
+        app:icon="@drawable/ic_key"
+        app:iconGravity="end"
+        app:strokeColor="@color/blue_700"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_forget_password"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_forget_username"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="start"
+        android:padding="12dp"
+        android:text="فراموشی نام کاربری"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="end"
+        app:strokeColor="@color/blue_700"
+        app:strokeWidth="2dp" />
+
+</RelativeLayout>
